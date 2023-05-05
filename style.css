@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+:root {
+    /* Primary */
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    
+    /* Accent */
+    --blue: hsl(248, 32%, 49%);
+    
+    /* Neutral */
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
+  }
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    font-size: 16px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-image: url(./images/bg-intro-desktop.png);
+    background-color: var(--red);
+}
+main{
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    color: white;
+    padding-right: 5rem;
+}
+.left h1{
+    font-size: 2.5rem;
+    padding-right: 7rem;
+    margin-bottom: 0;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+.free-message{
+    background-color: var(--blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 1rem ;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.bold{
+    font-weight: bold;
+}
+.user-inputs{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    height: 22rem;
+    justify-content: space-around;
+    text-align: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.input-field{
+    padding: .7rem;
+    border-radius: 5px;
+    border: solid 1px var(--grayish-blue);
+}
+.error-icon{
+    background-image:  url(./images/icon-error.svg);
+    background-repeat: no-repeat;
+    background-position: 95%;
+    border: 1.5px solid red;
+}
+.error{
+    margin: 0;
+    margin-left: auto;
+    font-size: .6rem;
+}
+#claim-button{
+    color: white;
+    background-color: var(--green);
+    border-radius: 5px;
+    padding: .7rem;
+    border: none;
+    font-weight: bold;
+}
+#claim-button:hover{
+    cursor: pointer;
+}
+#claim-button:active{
+    background-color: hsl(154, 65%, 62%);
+}
+#agreement{
+    margin-top: 0;
+    font-size: .6rem;
+}
+.red{
+    color: red;
+}
+@media (max-width: 650px){
+    body{
+        overflow: visible;
+        height: auto;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        width: 100%;  
+        min-height: 100vh;  
+    }
+    .left{
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        padding: 1rem;
+        text-align: center;
+    }
+    .left h1{
+        margin: 0;
+        padding: 0;
+        margin-top: 2rem;
+    }
+    .right{
+        width: 90%;
+    }
+    .free-message{
+
+        text-align: center;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    .user-inputs{
+        margin-bottom: 2rem;
+    }
+}
